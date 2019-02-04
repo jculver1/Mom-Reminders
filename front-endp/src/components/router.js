@@ -7,14 +7,14 @@ const AppRouter = (props) => (
   <nav>
     <ul>
       <li>
-        <Link to="/add">Add</Link>
+        <Link to="/home">Home</Link>
       </li>
       <li>
         <Link to="/reminders/">Current Reminders</Link>
       </li>
     </ul>
   </nav>
-  <Route path="/add" exact component={Add} />
+  <Route path="/add" exact component={Home} />
   <Route path="/reminders/" component={ReminderList} /> 
 </div>
 </Router>
