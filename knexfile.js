@@ -3,7 +3,7 @@
 module.exports = {
   development: {
     client: 'pg',
-    connection: 'postgresql://localhost/reminders'
+    connection: 'postgresql://localhost/reminders_db'
 },
 
 production: {
