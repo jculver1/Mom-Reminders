@@ -1,20 +1,24 @@
 import React, { Component } from 'react';
 import './App.css';
-import AppRouter from './components/router';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom"
 
 class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <AppRouter
-        
 
-        
-        />
-      </div>
-    );
-  }
-}
+      <Router>
+        <div className="App">
+          {/* <a 
+            className="btn-floating btn-large   waves-effect waves-light red"><i className="material-icons">
+              add</i>
+          </a> */}
 
-export default App;
+        </div>
+        <Router />
+
+        );
+      }
+    }
+    
+    export default App;
