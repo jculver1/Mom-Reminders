@@ -3,6 +3,22 @@ import './App.css';
 import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 
 class App extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      name: []
+    }
+  }
+
+  componentDidMount(){
+    fetch('http://localhost:3005')
+    .then (data => data.json())
+      .then (res => {
+        this.setState ({
+          name: res[0].name
+        })
+      })
+  }
 
 
   render() {
