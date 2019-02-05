@@ -2,6 +2,7 @@ import React from 'react'
 import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 
 const NavBar = () => {
+  return(
   <div>
     <nav>
     <div class="nav-wrapper">
@@ -13,6 +14,7 @@ const NavBar = () => {
     </div>
   </nav>
   </div>
+  )
 }
 
 export default NavBar
