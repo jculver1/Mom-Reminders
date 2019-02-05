@@ -8,7 +8,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Router>
+     
+        {/* <Router>
           <div>
             <nav>
               <ul>
@@ -23,7 +24,7 @@ class App extends Component {
             <Route path="/home" exact component={Home} />
             <Route path="/reminders/" component={ReminderList} /> 
           </div>
-        </Router>
+        </Router> */}
       </div>
     );
   }
