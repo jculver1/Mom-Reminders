@@ -6,9 +6,10 @@ import DropDownTasks from './DropDownTasks'
 const Home = (props) => {
     return(
         <div class="container">
-            <DropDownTasks/>
+           
             <Calendar clickDate={props.clickDate}/>
             <MainButton/>
+            <DropDownTasks />
         </div>
     )
 }
