@@ -1,11 +1,18 @@
 import React from 'react'
 import '../App.css'
+import image from "./CallMomButton.png"
 
 
 const MainButton = () => {
   return (
     <div>
-      <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">Call Mom</i></a>
+      <a 
+        className="btn-floating btn-large waves-effect waves-light red">
+        <i className="material-icons">Call Mom</i>
+      </a>
+
+      <img src={image} alt="call mom"></img>
+      
     </div>
   )
 }
