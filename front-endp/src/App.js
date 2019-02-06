@@ -30,10 +30,19 @@ class App extends Component {
   }
 
   clickDate = (event) => {
+
+  var stringified = event.toString()
     this.setState({
-      startDate: event
+      startDate: stringified
     });
+   
   }
+
+  // setTask = (event) => {
+  //   this.setState({
+  //     name: 
+  //   })
+  // }
 
   render() {
     return (

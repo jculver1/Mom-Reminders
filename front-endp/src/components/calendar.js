@@ -4,8 +4,10 @@ import DatePicker from "react-datepicker";
 
 const Calendar = (props) => {
     return(
-        <DatePicker
-        onChange={(event) => props.clickDate(event)}/>
+      <DatePicker
+        onChange={(event) => props.clickDate(event)}
+        placeholder="pick a date"
+      />
     )
 }
 
