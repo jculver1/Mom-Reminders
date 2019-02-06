@@ -9,7 +9,7 @@ const Home = (props) => {
            
             <Calendar clickDate={props.clickDate}/>
             <MainButton/>
-            <DropDownTasks />
+            <DropDownTasks options={props.options}/>
         </div>
     )
 }
