@@ -18,13 +18,14 @@ class App extends Component {
   }
 
   componentDidMount(){
-    fetch(url)
+    fetch('https://polar-reaches-88179.herokuapp.com/')
     .then (data => data.json())
       .then (res => {
         this.setState ({
           reminders: res,
           startDate: [],
-          taskName: res.map(item => item.name)
+          taskName: res.map(item => item.name),
+          taskDescription: res.map(item => item.description)
         })
       })
   }
@@ -42,7 +43,7 @@ class App extends Component {
           <div>
             <Navbar/>
             <Route path="/home" render={() => <Home clickDate={this.clickDate} options={this.state.taskName} />} />
-            <Route path="/reminders/" component={ReminderList} /> 
+            <Route path="/reminders/"  render={() => <ReminderList  /> } /> 
           </div>
         </Router>
       </div>
