@@ -29,11 +29,6 @@ const Home = (props) => {
         <MainButton />
       </div>
       
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-
     </div>
   )
 }
