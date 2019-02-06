@@ -5,6 +5,8 @@ import Navbar from './components/navbar'
 import ReminderList from './components/ReminderList'
 import Home from './components/home'
 
+const url = "https://polar-reaches-88179.herokuapp.com/"
+
 
 class App extends Component {
   constructor(props){
@@ -16,7 +18,7 @@ class App extends Component {
   }
 
   componentDidMount(){
-    fetch('http://localhost:3000')
+    fetch(url)
     .then (data => data.json())
       .then (res => {
         this.setState ({
