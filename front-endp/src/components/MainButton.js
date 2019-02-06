@@ -6,12 +6,10 @@ import image from "./CallMomButton.png"
 const MainButton = () => {
   return (
     <div>
-      <a 
-        className="btn-floating btn-large waves-effect waves-light red">
-        <i className="material-icons">Call Mom</i>
-      </a>
-
+      
+      <button className="callMomButton">
       <img src={image} alt="call mom"></img>
+      </button>
       
     </div>
   )
