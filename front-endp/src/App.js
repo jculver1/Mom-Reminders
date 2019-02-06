@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Route} from "react-router-dom";
 import Navbar from './components/navbar'
 import ReminderList from './components/ReminderList'
 import Home from './components/home'
+import data from './data.json'
 
 const url = "https://polar-reaches-88179.herokuapp.com/"
 
@@ -12,23 +13,27 @@ class App extends Component {
   constructor(props){
     super(props)
     this.state = {
-      reminders: [],
-      date: ''
+      reminders: data,
+      date: '',
+      taskName: itemName,
+      taskDescription: itemDescrip
     }
   }
 
-  componentDidMount(){
-    fetch('https://polar-reaches-88179.herokuapp.com/')
-    .then (data => data.json())
-      .then (res => {
-        this.setState ({
-          reminders: res,
-          startDate: [],
-          taskName: res.map(item => item.name),
-          taskDescription: res.map(item => item.description)
-        })
-      })
-  }
+  itemName = this.state.reminders.map(item => item.name)
+  itemDescrip = this.state.reminders.map(item => item.description)
+  // componentDidMount(){
+  //   fetch('https://polar-reaches-88179.herokuapp.com/')
+  //   .then (data => data.json())
+  //     .then (res => {
+  //       this.setState ({
+  //         reminders: res,
+  //         startDate: [],
+  //         taskName: res.map(item => item.name),
+  //         taskDescription: res.map(item => item.description)
+  //       })
+  //     })
+  // }
 
   clickDate = (event) => {
     this.setState({
