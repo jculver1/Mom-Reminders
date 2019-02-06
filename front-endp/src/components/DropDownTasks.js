@@ -1,15 +1,16 @@
 import React from 'react'
 import '../App.css'
+import Dropdown from 'react-dropdown'
+import 'react-dropdown/style.css'
 
 
-const DropDownTasks = () => {
+const DropDownTasks = (props) => {
   return (
-    <div>
-      <input
-        placeholder="Click for list of tasks"
-      >
-      </input>
-    </div>
+    < Dropdown 
+      options={props.options} 
+      // onChange={(event) => props...(event)}
+      // value={defaultOption} 
+      placeholder="Select an option" />
   )
 }
 

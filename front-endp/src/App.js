@@ -10,7 +10,7 @@ class App extends Component {
   constructor(props){
     super(props)
     this.state = {
-      name: [],
+      reminders: [],
       date: ''
     }
   }
@@ -20,8 +20,9 @@ class App extends Component {
     .then (data => data.json())
       .then (res => {
         this.setState ({
-          name: res,
-          startDate: []
+          reminders: res,
+          startDate: [],
+          taskName: res.map(item => item.name)
         })
       })
   }
@@ -38,7 +39,7 @@ class App extends Component {
         <Router>
           <div>
             <Navbar/>
-            <Route path="/home" render = {() => <Home clickDate={this.clickDate} />} />
+            <Route path="/home" render={() => <Home clickDate={this.clickDate} options={this.state.taskName} />} />
             <Route path="/reminders/" component={ReminderList} /> 
           </div>
         </Router>
