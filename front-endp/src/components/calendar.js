@@ -1,9 +1,10 @@
 import React from 'react'
+import DatePicker from "react-datepicker";
 
 
-const Calendar = () => {
+const Calendar = (props) => {
     return(
-         <input type="text" class="datepicker"/>
+        <DatePicker onChange={(event) => props.clickDate(event)}/>
     )
 }
 
