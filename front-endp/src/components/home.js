@@ -4,13 +4,38 @@ import Calendar from './calendar'
 import DropDownTasks from './DropDownTasks'
 
 const Home = (props) => {
-    return(
-        <div class="container">
-            <DropDownTasks/>
-            <Calendar clickDate={props.clickDate}/>
-            <MainButton/>
-        </div>
-    )
+  return (
+    <div class="container">
+
+      <div className="section center-align">
+          <Calendar clickDate={props.clickDate} />
+      </div>
+
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+
+      <div className="section center-align">
+        <DropDownTasks options={props.options} />
+      </div>
+
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+
+      <div className="section center-align">
+        <MainButton />
+      </div>
+      
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+
+    </div>
+  )
 }
 
 export default Home
