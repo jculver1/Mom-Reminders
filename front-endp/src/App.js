@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
 import './App.css';
-import {BrowserRouter as Router, Route, Link} from "react-router-dom";
+import {BrowserRouter as Router, Route} from "react-router-dom";
 import Navbar from './components/navbar'
 import ReminderList from './components/ReminderList'
 import Home from './components/home'
+
 
 class App extends Component {
   constructor(props){
     super(props)
     this.state = {
-      name: []
+      name: [],
+      date: ''
     }
   }
 
@@ -18,11 +20,17 @@ class App extends Component {
     .then (data => data.json())
       .then (res => {
         this.setState ({
-          name: res[0].name
+          name: res,
+          startDate: []
         })
       })
   }
 
+  clickDate = (event) => {
+    this.setState({
+      startDate: event
+    });
+  }
 
   render() {
     return (
@@ -30,7 +38,7 @@ class App extends Component {
         <Router>
           <div>
             <Navbar/>
-            <Route path="/home" exact component={Home} />
+            <Route path="/home" render = {() => <Home clickDate={this.clickDate} />} />
             <Route path="/reminders/" component={ReminderList} /> 
           </div>
         </Router>
