@@ -2,9 +2,9 @@
   "name": "Mom-Reminders",
   "version": "1.0.0",
   "description": "Web app that allows users to create reminders for specific tasks.",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
