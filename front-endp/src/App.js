@@ -20,8 +20,6 @@ class App extends Component {
     }
   }
 
-
-  
   // componentDidMount(){
   //   fetch('https://polar-reaches-88179.herokuapp.com/')
   //   .then (data => data.json())
@@ -39,7 +37,7 @@ class App extends Component {
 
   var stringified = event.toString()
     this.setState({
-      startDate: stringified
+      startDate: stringified.slice(0, 15)
     });
    
   }
