@@ -15,7 +15,7 @@ class App extends Component {
     this.state = {
       reminders: data,
       date: '',
-      taskName: data.reminders[0].map(item => item.name),
+      // taskName: data.reminders[0].map(item => item.name),
       // taskDescription: data.reminders.map(item => item.description)
     }
   }
