@@ -5,8 +5,8 @@ const NavBar = () => {
   return(
   <div>
     <nav>
-    <div className="nav-wrapper">
-      <a href="#" className="brand-logo right">Logo</a>
+        <div className="nav-wrapper red darken-4">
+      <a href="#" className="brand-logo right">Howlr</a>
       <ul id="nav-mobile" className="left hide-on-med-and-down">
         <li><Link to="/home">Home</Link></li>
         <li><Link to="/reminders/">Current Reminders</Link> </li>

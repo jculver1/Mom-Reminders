@@ -3,7 +3,7 @@ import Card from './Card'
 
 const ReminderList = () => {
     return(
-        <div><Card/></div>
+        <div><Card /></div>
     )
 }
 

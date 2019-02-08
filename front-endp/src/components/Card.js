@@ -7,9 +7,9 @@ const Card = () => {
         <div class="col s12 m6">
           <div class="card blue-grey darken-1">
             <div class="card-content white-text">
-              <span class="card-title">Laundry</span>
-              <h4>Febuary 8 2019, 6:00 pm </h4>
-              <p>Your laundry is getting moldy.</p>
+              <span class="card-title">Don't Forget</span>
+              <h4>{props.taskName}</h4>
+              <p>{props.taskDescription}</p>
             </div>
             <div class="card-action">
               <a href="/#">Update</a>
