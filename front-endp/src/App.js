@@ -40,7 +40,6 @@ class App extends Component {
 
   selectTask = (event) => {
     // event.preventDefault()
-    console.log(event.value)
     const description = this.state.reminders.filter(item => item.name === event.value)
       
     this.setState({
@@ -50,7 +49,7 @@ class App extends Component {
   }
 
   setTask = async (event) => {
-    // event.preventDefault()
+    event.preventDefault()
     const newReminder = {
       // id: this.state.remindersTable.length + 1,
       date: this.state.date,
@@ -58,7 +57,8 @@ class App extends Component {
       description: this.state.description
 
     }
-    await fetch(url, {
+    console.log(newReminder)
+    await fetch('https://polar-reaches-88179.herokuapp.com/reminders/', {
       method: 'POST',
       body: JSON.stringify(newReminder),
       headers: {
@@ -69,7 +69,9 @@ class App extends Component {
     this.setState({
      remindersTable: [...this.state.remindersTable, newReminder],
     })
+    
   }
+
 
   render() {
     return (
