@@ -16,6 +16,7 @@ class App extends Component {
     this.state = {
       reminders: data.reminders,
       date: '',
+      name: '',
       taskName: data.reminders.map(item => item.name),
       taskDescription: data.reminders.map(item => item.name),
       remindersTable: []
@@ -35,7 +36,7 @@ class App extends Component {
   clickDate = (event) => {
   var stringified = event.toString()
     this.setState({
-      startDate: stringified.slice(0, 15)
+      date: stringified.slice(0, 15)
     });
   }
 
