@@ -3,9 +3,28 @@
 }
 
 .bigDiv {
-  background-color: #87BFFF;
+  background-color: beige;
+  height: 100%;
+  font-family: 'Tangerine', cursive;
+}
+
+.cards {
+  background-color: #;
 }
 
 .container {
-  background-color: #87BFFF;
+  font-family:'Tangerine', cursive;
+  font-size: 16pt;
+  /* background-color: beige; */
+  width: 100%;
+}
+
+.fullNav {
+  font-family:'Tangerine', cursive;
+  
+}
+
+.taskBar {
+  width: 50%;
+  align-content: center;
 }
