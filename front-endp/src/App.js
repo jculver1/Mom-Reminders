@@ -21,18 +21,18 @@ class App extends Component {
   }
 
 
-  // componentDidMount(){
-  //   fetch('https://polar-reaches-88179.herokuapp.com/')
-  //   .then (data => data.json())
-  //     .then (res => {
-  //       this.setState ({
-  //         reminders: res,
-  //         date: [],
-  //         taskName: res.map(item => item.name),
-  //         taskDescription: res.map(item => item.description)
-  //       })
-  //     })
-  // }
+  componentDidMount(){
+    fetch('https://polar-reaches-88179.herokuapp.com/')
+    .then (data => data.json())
+      .then (res => {
+        this.setState ({
+          reminders: res,
+          date: [],
+          taskName: res.map(item => item.name),
+          taskDescription: res.map(item => item.description)
+        })
+      })
+  }
 
   clickDate = (event) => {
   var stringified = event.toString()
