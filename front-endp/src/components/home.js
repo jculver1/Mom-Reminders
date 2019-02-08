@@ -5,7 +5,7 @@ import DropDownTasks from './DropDownTasks'
 
 const Home = (props) => {
   return (
-    <div class="container">
+    <div className="container">
 
       <div className="section center-align">
         <h3>When do you need Momma?</h3>
@@ -23,7 +23,8 @@ const Home = (props) => {
       <br></br>
 
       <div className="section center-align">
-        <MainButton />
+        <MainButton 
+        setTask={props.setTask}/>
       </div>
       
     </div>
