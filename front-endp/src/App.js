@@ -49,8 +49,8 @@ class App extends Component {
       });
   }
 
-  setTask = (event) => {
-    event.preventDefault()
+  setTask = async (event) => {
+    // event.preventDefault()
     const newReminder = {
       // id: this.state.remindersTable.length + 1,
       date: this.state.date,
@@ -58,6 +58,17 @@ class App extends Component {
       description: this.state.description
 
     }
+    await fetch(url, {
+      method: 'POST',
+      body: JSON.stringify(newReminder),
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+      }
+    })
+    this.setState({
+     remindersTable: [...this.state.remindersTable, newReminder],
+    })
   }
 
   render() {
@@ -69,7 +80,8 @@ class App extends Component {
             <Route path="/home" render={() => <Home 
               clickDate={this.clickDate} 
               options={this.state.taskName}
-              selectTask={this.selectTask} />} />
+              selectTask={this.selectTask}
+              setTask={this.setTask} />} />
             <Route path="/reminders/"  render={() => <Card  
               date={this.state.date}
               taskName={this.state.taskName}

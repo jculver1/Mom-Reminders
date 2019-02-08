@@ -23,7 +23,8 @@ const Home = (props) => {
       <br></br>
 
       <div className="section center-align">
-        <MainButton />
+        <MainButton 
+        setTask={props.setTask}/>
       </div>
       
     </div>
