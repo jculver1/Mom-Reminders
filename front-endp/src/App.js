@@ -20,7 +20,6 @@ class App extends Component {
     }
   }
 
-
   componentDidMount(){
     fetch('https://polar-reaches-88179.herokuapp.com/')
     .then (data => data.json())
