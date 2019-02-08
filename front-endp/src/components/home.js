@@ -16,16 +16,17 @@ const Home = (props) => {
       <br></br>
 
       <div className="taskBar row center-align">
-            <DropDownTasks options={props.options} />
-      </div>
+            <DropDownTasks options={props.options}>
 
       <br></br>
       <br></br>
 
       <div className="section center-align">
-        <MainButton />
+        <MainButton 
+        setTask={props.setTask}/>
       </div>
       
+    
     </div>
   )
 }
