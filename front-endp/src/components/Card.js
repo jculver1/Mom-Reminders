@@ -17,10 +17,9 @@ const Card = (props) => {
               <a href="/#">Delete</a>
             </div>
           </div>
-        </div>
-      </div>
       </div>
     )
   }
   
   export default Card
+
