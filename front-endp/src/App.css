@@ -1,3 +1,30 @@
 .callMomButton {
   border: none;
 }
+
+.bigDiv {
+  background-color: white;
+  height: 100%;
+  font-family: 'Tangerine', cursive;
+}
+
+.cards {
+  background-color: beige;
+}
+
+.container {
+  font-family:'Tangerine', cursive;
+  font-size: 16pt;
+  /* background-color: beige; */
+  width: 100%;
+}
+
+.fullNav {
+  font-family:'Tangerine', cursive;
+  
+}
+
+.taskBar {
+  width: 50%;
+  align-content: center;
+}

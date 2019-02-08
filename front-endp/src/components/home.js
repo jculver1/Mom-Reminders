@@ -8,16 +8,15 @@ const Home = (props) => {
     <div className="container">
 
       <div className="section center-align">
-        <h3>When do you need Momma?</h3>
+        <h3>When do you need, Momma?</h3>
           <Calendar clickDate={props.clickDate} />
       </div>
 
       <br></br>
       <br></br>
 
-      <div className="section center-align">
-        <DropDownTasks options={props.options} selectTask={props.selectTask}/>
-      </div>
+      <div className="taskBar row center-align">
+            <DropDownTasks options={props.options}>
 
       <br></br>
       <br></br>
@@ -27,6 +26,7 @@ const Home = (props) => {
         setTask={props.setTask}/>
       </div>
       
+    
     </div>
   )
 }

@@ -1,0 +1,27 @@
+{
+  "name": "Mom-Reminders",
+  "version": "1.0.0",
+  "description": "Web app that allows users to create reminders for specific tasks.",
+  "main": "App.js",
+  "scripts": {
+    "start": "node App.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jculver1/Mom-Reminders.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jculver1/Mom-Reminders/issues"
+  },
+  "homepage": "https://github.com/jculver1/Mom-Reminders#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "knex": "^0.16.3",
+    "pg": "^7.8.0"
+  }
+}
