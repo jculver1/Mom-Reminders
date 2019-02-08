@@ -15,10 +15,11 @@ class App extends Component {
     this.state = {
       reminders: data,
       date: '',
-      taskName: data.reminders.map(item => item.name),
-      taskDescription: data.reminders.map(item => item.name)
+      taskName: data.reminders[0].map(item => item.name),
+      // taskDescription: data.reminders.map(item => item.description)
     }
   }
+
 
   // componentDidMount(){
   //   fetch('https://polar-reaches-88179.herokuapp.com/')
