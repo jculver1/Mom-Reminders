@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import './App.css';
 import {BrowserRouter as Router, Route} from "react-router-dom";
 import Navbar from './components/navbar'
-import ReminderList from './components/ReminderList'
+// import ReminderList from './components/ReminderList'
 import Home from './components/home'
 import data from './data.json'
+import Card from './components/Card'
 
 const url = "https://polar-reaches-88179.herokuapp.com/"
-
 
 class App extends Component {
   constructor(props){
@@ -18,18 +18,15 @@ class App extends Component {
       taskName: data.reminders.map(item => item.name),
       taskDescription: data.reminders.map(item => item.name)
     }
-    console.log(data.reminders[0].name)
   }
 
-  // itemName = this.data.map(item => item.name)
-  // itemDescrip = this.data.map(item => item.name)
   // componentDidMount(){
   //   fetch('https://polar-reaches-88179.herokuapp.com/')
   //   .then (data => data.json())
   //     .then (res => {
   //       this.setState ({
   //         reminders: res,
-  //         startDate: [],
+  //         date: [],
   //         taskName: res.map(item => item.name),
   //         taskDescription: res.map(item => item.description)
   //       })
@@ -37,12 +34,10 @@ class App extends Component {
   // }
 
   clickDate = (event) => {
-
   var stringified = event.toString()
     this.setState({
-      startDate: stringified
+      startDate: stringified.slice(0, 15)
     });
-   
   }
 
   // setTask = (event) => {
@@ -56,9 +51,15 @@ class App extends Component {
       <div className="App">
         <Router>
           <div>
-            <Navbar/>
-            <Route path="/home" render={() => <Home clickDate={this.clickDate} options={this.state.taskName} />} />
-            <Route path="/reminders/"  render={() => <ReminderList  /> } /> 
+            <Navbar />
+            <Route path="/home" render={() => <Home 
+              clickDate={this.clickDate} 
+              options={this.state.taskName} />} />
+            <Route path="/reminders/"  render={() => <Card  
+              date={this.state.date}
+              taskName={this.state.taskName}
+              taskDescription={this.state.taskDescription}
+          /> } /> 
           </div>
         </Router>
       </div>
