@@ -6,7 +6,7 @@ const Calendar = (props) => {
     return(
       <DatePicker
         onChange={(event) => props.clickDate(event)}
-        placeholderText="          Pick a date"
+        placeholderText="Pick a date"
       />
     )
 }

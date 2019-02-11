@@ -9,7 +9,7 @@ const DropDownTasks = (props) => {
     < Dropdown 
       options={props.options} 
       onChange={(event) => props.selectTask(event)}
-      placeholder="Select an option" />
+      placeholderText="Select an option" />
   )
 }
 

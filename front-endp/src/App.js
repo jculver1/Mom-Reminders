@@ -38,6 +38,26 @@ class App extends Component {
     });
   }
 
+  deleteReminder = async (e) => {
+    e.preventDefault()
+    const removeReminder = this.state.remindersTable.filter(item => {
+      if (item.id === ???) {
+      }
+      return !item.id
+    })
+    await fetch('https://polar-reaches-88179.herokuapp.com/reminders/???', {
+      method: 'DELETE',
+      body: JSON.stringify(removeReminder),
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+      }
+    })
+    this.setState({
+      remindersTable: removeReminder,
+    })
+  }
+
   selectTask = (event) => {
     // event.preventDefault()
     const description = this.state.reminders.filter(item => item.name === event.value)
