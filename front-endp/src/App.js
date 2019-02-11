@@ -6,7 +6,7 @@ import Navbar from './components/navbar'
 import Home from './components/home'
 import data from './data.json'
 import Card from './components/Card'
-
+import ReminderList from './components/ReminderList'
 const url = "https://polar-reaches-88179.herokuapp.com/"
 
 class App extends Component {
@@ -38,25 +38,25 @@ class App extends Component {
     });
   }
 
-  deleteReminder = async (e) => {
-    e.preventDefault()
-    const removeReminder = this.state.remindersTable.filter(item => {
-      if (item.id === ???) {
-      }
-      return !item.id
-    })
-    await fetch('https://polar-reaches-88179.herokuapp.com/reminders/???', {
-      method: 'DELETE',
-      body: JSON.stringify(removeReminder),
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json',
-      }
-    })
-    this.setState({
-      remindersTable: removeReminder,
-    })
-  }
+  // deleteReminder = async (e) => {
+  //   e.preventDefault()
+  //   const removeReminder = this.state.remindersTable.filter(item => {
+  //     if (item.id === ???) {
+  //     }
+  //     return !item.id
+  //   })
+  //   await fetch('https://polar-reaches-88179.herokuapp.com/reminders/???', {
+  //     method: 'DELETE',
+  //     body: JSON.stringify(removeReminder),
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //       'Accept': 'application/json',
+  //     }
+  //   })
+  //   this.setState({
+  //     remindersTable: removeReminder,
+  //   })
+  // }
 
   selectTask = (event) => {
     // event.preventDefault()
@@ -104,10 +104,11 @@ class App extends Component {
               options={this.state.taskName}
               selectTask={this.selectTask}
               setTask={this.setTask} />} />
-            <Route path="/reminders/"  render={() => <Card  
-              date={this.state.date}
-              taskName={this.state.taskName}
-              taskDescription={this.state.taskDescription}
+           <Route path="/reminders/"  render={() => <ReminderList 
+              // date={this.state.date}
+              // taskName={this.state.taskName}
+              // taskDescription={this.state.taskDescription}
+              remindersTable={this.state.reminders}
           /> } /> 
           </div>
         </Router>
