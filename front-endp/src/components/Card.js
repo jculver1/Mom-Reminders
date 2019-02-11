@@ -8,7 +8,7 @@ const Card = (props) => {
             <div className="col s12 m6">
               <div className='card'>
                 <div className="cards">
-                  <div className="card-content white-text">
+                  <div className="card-content black-text">
                     <span className="black-text card-title">Don't Forget . . .</span>
                     <h4>{props.reminderName}</h4>
                     <p>{props.reminderDescription}</p>
